@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Seminar Anlegen</title>
+    <link rel="stylesheet" type="text/css"
+href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="Bilder/tiger_logo.png" alt="Nicht sichtbar" width="200" height="100">
+        </div>
+        <h1>Anlegen eines Seminars</h1>
+    </header>
+    <!--NAvigation-->
+    <nav>
+        <ul>
+            <li>
+                <a href="Seminarleiter.html">Seminarleiter</a>
+            </li>
+            <li>
+                <a href="Detailseite.html">Detailseite zum Seminar</a>
+            </li>
+            <li>
+                <a href="Seminar1.html">Seminare</a>
+            </li>
+            <li>
+                <a href="Anlegen.html">Seminar Anlegen</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!--Formular-->
+        <form action="http://www.elsvene.de/seminarApp/testCreateSeminar.php" method="post">
+            <fieldset>
+                <legend>Daten</legend>
+                <p><label for="Seminartitel">Seminartitel:</label>
+                    <input type="text" name="semtitle" id="Seminartitel" pattern="[A-Z]{1}.*" size="20" maxlength="20" required placeholder="Web" autofocus>
+                </p>
+                <p><label for="Seminarleiter">Name des Seminarleiters:</label>
+                    <select name="semlead" id="Seminarleiter">
+                        <option value="Jörges">Jörges</option>
+                        <option value="Burzlaff">Burzlaff</option>
+                        <option value="Koll">Koll</option>
+                        <option value="Rietmann">Rietmann</option>
+                        <option value="Bab">Bab</option>
+                    </select>
+                </p>
+                <p><label for="datum">Veranstaltungsdatum:</label>
+                    <input type="date" name="semdate" id="datum" size="20">
+                </p>
+                <p><label for="Beginn">Uhrzeit-Start:</label>
+                    <input type="time" name="semstart" id="Beginn"  min="08:00" max="16:00">
+                </p>
+                <p><label for="end">Uhrzeit-Ende:</label>
+                    <input type="time" name="semend" id="end" max="18:00">
+                </p>
+                <p><label for="place">Anzahl verfügbarer Plätze:</label>
+                    <input type="number" name="semseats" id="place" min="0" max="100" value="">
+                </p>
+                <p><label for="tutor">Tutor:</label>
+                    <input type="text" name="semtutors" id="tutor" pattern="[a-z]{2,4}\d{1}(,[a-z]{2,4}\d{1})*">
+                </p>
+            </fieldset>
+            <fieldset>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </main>
+    <aside>
+        <h2>Zusatzinformation:</h2>
+        <p>Meldung vom 16.05.2018 :
+            <br>Hier können Sie einen Seminar anlegen.</p>
+    </aside>
+    <footer>
+        Copyright by Tuan
+    </footer>
+</body>
+
+</html>

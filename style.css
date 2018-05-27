@@ -1,0 +1,13 @@
+
+/*CSS - einheitliche Überschriften */
+h1{
+    color: blue;
+}
+
+body{
+    font-family: Arial,sans-serif;
+}
+
+li.mail{
+    list-style-image: url(Bilder/mail.png);
+}
